@@ -5,6 +5,7 @@ export default class Fave extends Component {
   handleClick = (e) => {
     console.log(e);
     console.log("click");
+    e.stopPropagation();
   }
 
   render() {

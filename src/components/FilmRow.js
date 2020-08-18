@@ -3,11 +3,17 @@ import FilmPoster from './FilmPoster';
 import Fave from './Fave';
 
 export default class FilmRow extends Component {
+  handleDetailsClick = (film) => {
+    console.log("Fetch:", film);
+  };
+
   render() {
     let film = this.props.film;
 
     return (
-      <div className="film-row">
+      <div
+        onClick = {() => this.handleDetailsClick(film.title)}
+          className="film-row">
         <FilmPoster film={film} />
         <div className="film-summary">
           <h1>{film.title}</h1>
