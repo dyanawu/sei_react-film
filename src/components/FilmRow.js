@@ -5,8 +5,6 @@ import Fave from './Fave';
 export default class FilmRow extends Component {
   render() {
     let film = this.props.film;
-    let posterUrl = `https://image.tmdb.org/t/p/w780/${film.poster_path}`;
-
 
     return (
       <div className="film-row">
