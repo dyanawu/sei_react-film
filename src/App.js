@@ -13,6 +13,10 @@ class App extends Component {
     current: {}
   }
 
+  handleFaveToggle = (film) => {
+    console.log(film);
+  }
+
   render() {
     let filmData = TMDB.films;
 
