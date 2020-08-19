@@ -29,6 +29,11 @@ class App extends Component {
     this.setState({faves});
   }
 
+  handleDetailsClick = (film) => {
+    console.log("Fetch:", film);
+    this.setState({current: film});
+  };
+
   render() {
     let filmData = TMDB.films;
 
@@ -38,6 +43,7 @@ class App extends Component {
           films={this.state.films}
           faves={this.state.faves}
           onFaveToggle = {this.handleFaveToggle}
+          onFilmClick={this.handleDetailsClick}
         />
 
         <FilmDetails
