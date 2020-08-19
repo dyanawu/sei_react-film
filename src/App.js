@@ -25,6 +25,8 @@ class App extends Component {
       console.log("remove");
       faves.splice(filmIndex, 1);
     }
+
+    this.setState({faves});
   }
 
   render() {
