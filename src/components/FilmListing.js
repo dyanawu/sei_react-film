@@ -38,6 +38,7 @@ export default class FilmListing extends Component {
             <FilmRow
               key={film.id}
               film={film}
+              onFaveToggle={() => this.props.onFaveToggle(film)}
             />
           ))}
         </ul>
