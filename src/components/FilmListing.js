@@ -13,8 +13,8 @@ export default class FilmListing extends Component {
   };
 
   render() {
-    let allFilms = this.props.films;
     let faves = this.props.faves;
+    let allFilms = this.state.filter === "faves" ? faves : this.props.films;
 
     return (
       <div className="film-list">
