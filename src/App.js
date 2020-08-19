@@ -19,11 +19,12 @@ class App extends Component {
     return (
       <div className="film-library">
         <FilmListing
-          films = {this.state.films}
+          films={this.state.films}
+          faves={this.state.faves}
         />
 
         <FilmDetails
-          film = {this.state.current}
+          film={this.state.current}
         />
       </div>
     );

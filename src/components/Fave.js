@@ -3,10 +3,8 @@ import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 
 export default class Fave extends Component {
   handleClick = (e) => {
-    console.log(e);
-    console.log("click");
-    this.setState(prevState => ({ isFave: !prevState.isFave }));
     e.stopPropagation();
+    this.props.onFaveToggle();
   }
 
   render() {
