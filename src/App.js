@@ -17,6 +17,12 @@ class App extends Component {
     console.log(film);
     let faves = this.state.faves.slice();
     const filmIndex = faves.indexOf(film);
+
+    if (filmIndex === -1) {
+      console.log("add");
+    } else {
+      console.log("remove");
+    }
   }
 
   render() {
