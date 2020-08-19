@@ -39,6 +39,7 @@ class App extends Component {
       url: url
     }).then(response => {
       console.log(response); // take a look at what you get back!
+      this.setState({ current: response.data });
     });
   };
 
