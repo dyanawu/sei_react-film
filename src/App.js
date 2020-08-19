@@ -6,6 +6,8 @@ import FilmDetails from './components/FilmDetails';
 
 import TMDB from './TMDB';
 
+import axios from 'axios';
+
 class App extends Component {
   state = {
     films: TMDB.films,
@@ -31,24 +33,31 @@ class App extends Component {
 
   handleDetailsClick = (film) => {
     const url = `https://api.themoviedb.org/3/movie/${film.id}?api_key=${TMDB.api_key}&append_to_response=videos,images&language=en`;
+
+    axios({
+      method: 'GET',
+      url: url
+    }).then(response => {
+      console.log(response); // take a look at what you get back!
+    });
   };
 
   render() {
     let filmData = TMDB.films;
 
     return (
-      <div className="film-library">
+        <div className="film-library">
         <FilmListing
-          films={this.state.films}
-          faves={this.state.faves}
-          onFaveToggle = {this.handleFaveToggle}
-          onFilmClick={this.handleDetailsClick}
+      films={this.state.films}
+      faves={this.state.faves}
+      onFaveToggle = {this.handleFaveToggle}
+      onFilmClick={this.handleDetailsClick}
         />
 
         <FilmDetails
-          film={this.state.current}
+      film={this.state.current}
         />
-      </div>
+        </div>
     );
   }
 }
