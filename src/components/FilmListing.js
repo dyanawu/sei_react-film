@@ -30,7 +30,7 @@ export default class FilmListing extends Component {
             onClick = {() => this.handleFilterClick('faves')}
             className="film-list-filter">
             FAVES
-            <span className="section-count">0</span>
+            <span className="section-count">{faves.length}</span>
           </div>
         </div>
 
