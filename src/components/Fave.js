@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 
 export default class Fave extends Component {
-  state = {
-    isFave: false
-  };
-
   handleClick = (e) => {
     console.log(e);
     console.log("click");
