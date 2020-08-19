@@ -14,6 +14,7 @@ export default class FilmListing extends Component {
 
   render() {
     let allFilms = this.props.films;
+    let faves = this.props.faves;
 
     return (
       <div className="film-list">
@@ -38,6 +39,7 @@ export default class FilmListing extends Component {
             <FilmRow
               key={film.id}
               film={film}
+              isFave={faves.includes(film)}
               onFaveToggle={() => this.props.onFaveToggle(film)}
             />
           ))}

@@ -20,6 +20,7 @@ export default class FilmRow extends Component {
           <p>{new Date(film.release_date).getFullYear()}</p>
         </div>
         <Fave
+          isFave={this.props.isFave}
           onFaveToggle={this.props.onFaveToggle}
         />
       </div>
