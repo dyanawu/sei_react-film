@@ -15,6 +15,7 @@ class App extends Component {
 
   handleFaveToggle = (film) => {
     console.log(film);
+    let faves = this.state.faves.slice();
   }
 
   render() {
