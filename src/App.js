@@ -37,6 +37,7 @@ class App extends Component {
         <FilmListing
           films={this.state.films}
           faves={this.state.faves}
+          onFaveToggle = {this.handleFaveToggle}
         />
 
         <FilmDetails
