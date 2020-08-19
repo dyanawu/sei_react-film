@@ -30,8 +30,7 @@ class App extends Component {
   }
 
   handleDetailsClick = (film) => {
-    console.log("Fetch:", film);
-    this.setState({current: film});
+    const url = `https://api.themoviedb.org/3/movie/${film.id}?api_key=${TMDB.api_key}&append_to_response=videos,images&language=en`;
   };
 
   render() {
