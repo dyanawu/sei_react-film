@@ -13,13 +13,15 @@ export default class FilmRow extends Component {
     return (
       <div
         onClick = {() => this.handleDetailsClick(film.title)}
-          className="film-row">
+        className="film-row">
         <FilmPoster film={film} />
         <div className="film-summary">
           <h1>{film.title}</h1>
           <p>{new Date(film.release_date).getFullYear()}</p>
         </div>
-        <Fave />
+        <Fave
+          onFaveToggle={this.props.onFaveToggle}
+        />
       </div>
     );
   }
