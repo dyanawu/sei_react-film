@@ -13,7 +13,7 @@ export default class FilmListing extends Component {
   };
 
   render() {
-    let allFilms = this.props.filmData;
+    let allFilms = this.props.films;
 
     return (
       <div className="film-list">
@@ -23,7 +23,7 @@ export default class FilmListing extends Component {
             onClick = {() => this.handleFilterClick('all')}
             className="film-list-filter">
             ALL
-            <span className="section-count">{this.props.filmData.length}</span>
+            <span className="section-count">{allFilms.length}</span>
           </div>
           <div
             onClick = {() => this.handleFilterClick('faves')}
