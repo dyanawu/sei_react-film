@@ -20,8 +20,10 @@ class App extends Component {
 
     if (filmIndex === -1) {
       console.log("add");
+      faves.push(film);
     } else {
       console.log("remove");
+      faves.splice(filmIndex, 1);
     }
   }
 
