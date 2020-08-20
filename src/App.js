@@ -45,18 +45,18 @@ class App extends Component {
 
   render() {
     return (
-        <div className="film-library">
+      <div className="film-library">
         <FilmListing
-      films={this.state.films}
-      faves={this.state.faves}
-      onFaveToggle = {this.handleFaveToggle}
-      onFilmClick={this.handleDetailsClick}
+          films={this.state.films}
+          faves={this.state.faves}
+          onFaveToggle = {this.handleFaveToggle}
+          onFilmClick={this.handleDetailsClick}
         />
 
         <FilmDetails
-      film={this.state.current}
+          film={this.state.current}
         />
-        </div>
+      </div>
     );
   }
 }
