@@ -1,4 +1,5 @@
 import React from 'react';
+import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 
 export default function FilmDetails(props) {
   const backdropUrl = `https://image.tmdb.org/t/p/w1280/${props.film.backdrop_path}`;
@@ -26,7 +27,7 @@ export default function FilmDetails(props) {
     details = (
       <div className="film-detail">
         <p>
-          <i className="material-icons">subscriptions</i>
+          <i className="material-icons"><SubscriptionsIcon /></i>
           <span>No film selected</span>
         </p>
       </div>
