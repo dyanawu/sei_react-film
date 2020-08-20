@@ -44,8 +44,6 @@ class App extends Component {
   };
 
   render() {
-    let filmData = TMDB.films;
-
     return (
         <div className="film-library">
         <FilmListing
